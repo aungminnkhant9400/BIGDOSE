@@ -469,7 +469,7 @@ class DemoWindow(QMainWindow):
         self.display_segmentation_images_after_totalsegmentor('small_bowel')
 
     def display_segmentation_images_after_totalsegmentor_bone_marrow(self):
-        self.display_segmentation_images_after_totalsegmentor('bone_marrow')
+        self.display_segmentation_images_after_totalsegmentor('L1_to_L5_bone_marrow')
 
     def display_segmentation_images_after_totalsegmentor_parotid_gland_left(self):
         self.display_segmentation_images_after_totalsegmentor('parotid_gland_left')
@@ -567,8 +567,9 @@ class DemoWindow(QMainWindow):
         lung_upper_lobe_right = folder + '\\' + 'organs_in_ui\\' + 'lung_upper_lobe_right.nii.gz'
 
         lung_lower_lobe_right_head = nib.load(lung_lower_lobe_right)
+        lung_middle_lobe_right_head = nib.load(lung_middle_lobe_right)
 
-        lung_lower_lobe_right_array = lung_lower_lobe_right_head.get_fdata()
+        lung_lower_lobe_right_array = lung_lower_lobe_right_head.get_fdata() + lung_middle_lobe_right_head.get_fdata()
 
         print(000)
 
