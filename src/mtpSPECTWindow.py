@@ -234,6 +234,11 @@ class DemoWindow(QMainWindow):
         self.ui.checkBox_27.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_27))
         self.ui.checkBox_28.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_28))
         self.ui.checkBox_29.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_29))
+        self.ui.checkBox_22.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_22))
+        self.ui.checkBox_23.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_23))
+        self.ui.checkBox_24.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_24))
+        self.ui.checkBox_25.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_25))
+        self.ui.checkBox_26.clicked.connect(lambda: self.handle_checkbox_click(self.ui.checkBox_26))
 
     def handle_checkbox_click(self, clicked_checkbox):
         checkboxes = [
@@ -242,7 +247,9 @@ class DemoWindow(QMainWindow):
             self.ui.checkBox_5, self.ui.checkBox_14, self.ui.checkBox_12, self.ui.checkBox_13,
             self.ui.checkBox_10, self.ui.checkBox_9, self.ui.checkBox_8, self.ui.checkBox_21,
             self.ui.checkBox_19, self.ui.checkBox_20, self.ui.checkBox_17, self.ui.checkBox_16,
-            self.ui.checkBox_15, self.ui.checkBox_27, self.ui.checkBox_28, self.ui.checkBox_29
+            self.ui.checkBox_15, self.ui.checkBox_27, self.ui.checkBox_28, self.ui.checkBox_29,
+            self.ui.checkBox_22, self.ui.checkBox_23, self.ui.checkBox_24, self.ui.checkBox_25,
+            self.ui.checkBox_26
         ]
         for checkbox in checkboxes:
             if checkbox != clicked_checkbox:
@@ -475,7 +482,7 @@ class DemoWindow(QMainWindow):
         self.display_segmentation_images_after_totalsegmentor('parotid_gland_left')
 
     def display_segmentation_images_after_totalsegmentor_parotid_gland_right(self):
-        self.display_segmentation_images_after_totalsegmentor('parotid_gland_right')
+        self.display_segmentation_images_after_totalsegmentor('/parotid_gland_right')
 
 
 
